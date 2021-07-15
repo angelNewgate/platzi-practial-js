@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geomtric figures</title>
+</head>
+<body>
+  <header>
+    <h1>
+      Geomtric figures
+    </h1>
+    <p>This is the very first workshop of the practical course of JavaScript!</p>
+  </header>
+<!-- SQUARE -->
+  <section>
+    <h2>Calculate the perimeter and area of a square</h2>
+    <form>
+      <div>
+        <label for="squareInput">
+          How long is each side of your square?
+        </label>
+        <input id="squareInput" type="number"/>
+      </div>
+
+      <div>
+        <button type="button" onclick="calculateSquarePerimeter()">
+          Calculate perimeter
+        </button>
+        <button type="button" onclick="calculateSquareArea()">
+          Calculate area
+        </button>
+      </div>
+
+    </form>
+
+    <div>
+      <p id="squarePerimeterText"></p>
+      <p id="squareAreaText"></p>
+    </div>
+
+  </section>
+  <!-- TRIANGLE -->
+  <section>
+    <h2>Calculate the perimeter and area of a triangle</h2>
+    <form>
+      <div>
+        <label for="triangleSideA">
+          How long is the side A of your triangle?
+        </label>
+        <input id="triangleSideA" type="number"/>
+        <label for="triangleSideB">
+          How long is the side B of your triangle?
+        </label>
+        <input id="triangleSideB" type="number"/>
+        <label for="triangleBase">
+          How long is the base of your triangle?
+        </label>
+        <input id="triangleBase" type="number"/>
+        <label for="triangleHeight">
+          How long is the height of your triangle?
+        </label>
+        <input id="triangleHeight" type="number"/>
+      </div>
+
+      <div>
+        <button type="button" onclick="calculateTrianglePerimeter()">
+          Calculate perimeter
+        </button>
+        <button type="button" onclick="calculateTriangleArea()">
+          Calculate area
+        </button>
+      </div>
+
+    </form>
+
+    <div>
+      <p id="trianglePerimeterText"></p>
+      <p id="triangleAreaText"></p>
+    </div>
+
+  </section>
+<!-- CIRCLE -->
+  <section>
+    <h2>Calculate the perimeter and area of a triangle</h2>
+    <form>
+      <div>
+        <label for="circleInput">
+          How much measure the radio of your circle?
+        </label>
+        <input id="circleInput" type="number"/>
+      </div>
+
+      <div>
+        <button type="button" onclick="calculateCirclePerimeter()">
+          Calculate perimeter
+        </button>
+        <button type="button" onclick="calculateCircleArea()">
+          Calculate area
+        </button>
+      </div>
+
+    </form>
+
+    <div>
+      <p id="circlePerimeterText"></p>
+      <p id="circleAreaText"></p>
+    </div>
+
+  </section>
+
+
+
+
+  <script src="./figures.js"></script>
+
+  </body>
+</html>
