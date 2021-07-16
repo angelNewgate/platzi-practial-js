@@ -125,13 +125,13 @@ const calculateCircleArea = () => {
     circleAreaText.innerHTML = `Area: ${overcome}.`;
 }
 
-const height = (sideA, sideB, base) => {
-    if (sideA === sideB && sideA != base) {
-        alert("Your triangle is isosceles!")
-        const height = (Math.sqrt(sideB **2 ) - ((base/2) **2 ));
-        console.log(height);
-    }
-    else {
-        alert("Try it again, your triangle is not isosceles!")
-    }
-}
+// const height = (sideA, sideB, base) => {
+//     if (sideA === sideB && sideA != base) {
+//         alert("Your triangle is isosceles!")
+//         const height = (Math.sqrt(sideB **2 ) - ((base/2) **2 ));
+//         console.log(height);
+//     }
+//     else {
+//         alert("Try it again, your triangle is not isosceles!")
+//     }
+// }
