@@ -1,8 +1,8 @@
-const statisticsInput = document.querySelector("#statisticsInput");
-const statisticsInputTextA = document.querySelector("#statisticsInputTextA");
-const statisticsInputTextB = document.querySelector("#statisticsInputTextB");
-const statisticsInputTextC = document.querySelector("#statisticsInputTextC");
-const statisticsInputTextD = document.querySelector("#statisticsInputTextD");
+const averageInput = document.querySelector("#averageInput");
+const averageInputTextA = document.querySelector("#averageInputTextA");
+const averageInputTextB = document.querySelector("#averageInputTextB");
+const averageInputTextC = document.querySelector("#averageInputTextC");
+const averageInputTextD = document.querySelector("#averageInputTextD");
 
 const list1 = [
   100,
@@ -11,8 +11,8 @@ const list1 = [
   700,
 ];
 
-// MEAN
-const calculateMean = (list) => {
+// Average
+const calculateAverage = (list) => {
   // let total = 0;
   // list.forEach((number) => {
   //   total += number;
@@ -21,16 +21,17 @@ const calculateMean = (list) => {
   // return average;
   let array = list.split(", ");
   let addElements = array.reduce((e1, e2) => Number(e1) + Number(e2));
-  return mean = addElements / array.length;
+  return average = addElements / array.length;
 }
 
-const getMean = () => {
-  const value = statisticsInput.value;
-  let overcome = calculateMean(value);
-  statisticsInputTextA.innerHTML = `Mean: ${overcome.toFixed(2)}`;
+const getAverage = () => {
+  const value = averageInput.value;
+  let overcome = calculateAverage(value);
+  averageInputTextA.innerHTML = `Average: ${overcome.toFixed(2)}`;
 }
 
-// MEDIAN
+// Median
+  
 const isEven = (number) => {
   if (number % 2 === 0) {
     return true;
@@ -49,8 +50,8 @@ const calculateMedian = (list) => {
       const e1 = sortedList[middleList - 1];
       const e2 = sortedList[middleList];
       console.log(e2);
-      const meanMedian = (Number(e1) + Number(e2)) /2;
-      median = meanMedian;
+      const averageMedian = (Number(e1) + Number(e2)) /2;
+      median = averageMedian;
       return median;
       // console.log(median);
   }
@@ -61,10 +62,10 @@ const calculateMedian = (list) => {
 }
 
 const getMedian = () => {
-  const value = statisticsInput.value;
+  const value = averageInput.value;
   const median = calculateMedian(value);
   // console.log(median);
-  statisticsInputTextB.innerHTML = `Median: ${parseFloat(median)}`;
+  averageInputTextB.innerHTML = `Median: ${parseFloat(median)}`;
 }
 
 //MODE
@@ -77,13 +78,13 @@ const calculateMode = (list) => {
 }
 
 const getMode = () => {
-  const value = statisticsInput.value;
+  const value = averageInput.value;
   const mode = calculateMode(value);
-  statisticsInputTextC.innerHTML = `Mode: ${parseFloat(mode)}`;
+  averageInputTextC.innerHTML = `Mode: ${parseFloat(mode)}`;
   // console.log(mode);
 }
 
-// GEOMETRIC MEAN
+// Geometric mean
 const calculateGeometricMean = (list) => {
   let array = list.split(", ");
   // total = 0;
@@ -96,7 +97,7 @@ const calculateGeometricMean = (list) => {
 }
 
 const getGeometricMean = () => {
-  const value = statisticsInput.value;
+  const value = averageInput.value;
   const geometricMean = calculateGeometricMean(value);
-  statisticsInputTextD.innerHTML = `Geometric mean: ${geometricMean}`;
+  averageInputTextD.innerHTML = `Geometric mean: ${geometricMean}`;
 } 
