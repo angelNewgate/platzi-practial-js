@@ -105,3 +105,6 @@ dist
 
 # VSC Config
 .vscode
+
+# Useless folder
+."kinda useless"
