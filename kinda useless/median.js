@@ -1,3 +1,5 @@
+const averageInputTextB = document.querySelector("#averageInputTextB");
+
 const calculateAverage = (list) => {
   let total = 0;
   list.forEach((number) => {
@@ -26,20 +28,29 @@ const isEven = (number) => {
   }  
 }
 
-const getMedian = (list) => { 
-  const sortedList = list.sort((a, b) => a - b);
-  // console.log(list);
+const calculateMedian = (list) => {
+  const array = list.split(", ");
+  const sortedList = array.sort((a, b) => a - b);
   const middleList = parseInt(sortedList.length / 2);
   let median;
   if (isEven(sortedList.length)) {
       const e1 = sortedList[middleList - 1];
       const e2 = sortedList[middleList];
-      const averageMedian = calculateAverage([e1, e2]);
+      console.log(e2);
+      const averageMedian = (Number(e1) + Number(e2)) /2;
       median = averageMedian;
+      return median;
       // console.log(median);
   }
   else {
     median = sortedList[middleList];
-    // console.log(median);
+    return median;
   }
+}
+
+const getMedian = () => {
+  const value = averageInput.value;
+  const median = calculateMedian(value);
+  // console.log(median);
+  averageInputTextB.innerHTML = `Median: ${parseFloat(median)}`;
 }
